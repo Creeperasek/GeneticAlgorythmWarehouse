@@ -15,6 +15,11 @@ namespace GeneticAlgorythmWH
             Coordinates = coordinates;
         }
 
+        public override string ToString()
+        {
+            return $"Id:{Id}\tUsage:{Usage}\tCords:{Coordinates}\n";
+        }
+
     }
 
 }
