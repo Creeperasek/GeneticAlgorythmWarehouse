@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        
+
         private static void Main(string[] args)
         {        
             int populationSize = 10;
@@ -10,16 +10,24 @@
 
             Random random = new Random();
 
-            List<Shelf[]> population = new List<Shelf[]>();
+            List<Warehouse> population = new List<Warehouse>();
     
+            Warehouse warehouse= new Warehouse(shelfCount);
 
-            Shelf[] Warehouse = new Shelf[shelfCount];
-            for (int i = 0;i < shelfCount; i++)
+            population.Add(warehouse);
+
+            for (int i = 0;i<populationSize;i++)
             {
-                Warehouse[i].Id = i;
-                Warehouse[i].Usage = random.Next(0, 100);
-                Warehouse[i].Coordinates = new Point(random.Next(0,100),random.Next(0,100));
+                population.Add(new Warehouse(6));
+                population[i].ShuffleShelvs();    
             }
+
+            foreach (Warehouse wh in population)
+            {
+                Console.WriteLine(wh+"\n");
+            }
+
+
 
             
             
