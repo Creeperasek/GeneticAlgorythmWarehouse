@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace GeneticAlgorythmWH
 {
-    class Shelf
+    public class Shelf
     {
         public int Id { get; set; }
         public int Usage { get; set; }
@@ -14,7 +14,7 @@ namespace GeneticAlgorythmWH
             Usage = usage;
             Coordinates = coordinates;
         }
-        
+
     }
 
 }
