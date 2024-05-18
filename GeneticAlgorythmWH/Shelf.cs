@@ -15,6 +15,12 @@ namespace GeneticAlgorythmWH
             Coordinates = coordinates;
         }
 
+        public double GetShelfValue()
+        {
+            double coordinatesValue = Coordinates.CalculateDistance(new Point(0,0));
+            return coordinatesValue*Usage;
+        }
+
         public override string ToString()
         {
             return $"Id:{Id}\tUsage:{Usage}\tCords:{Coordinates}\n";
