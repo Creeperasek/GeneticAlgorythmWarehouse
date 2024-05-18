@@ -15,6 +15,14 @@ namespace GeneticAlgorythmWH
             }
             
         }
+        public static void GeneratePopulation(this List<Warehouse> population,int populationSize,int shelfCount)
+        {
+            for (int i = 0;i<populationSize;i++)
+            {
+                population.Add(new Warehouse(shelfCount));
+                population[i].ShuffleShelvs();
+            }
+        }
     }
 
 }
