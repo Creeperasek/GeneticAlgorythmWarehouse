@@ -1,1 +1,1 @@
-Simple Genetic Algorythm to learn how it works (on example Warehouse)  
+Simple Genetic Algorythm to learn how it works (on Warehouse as an example)  
