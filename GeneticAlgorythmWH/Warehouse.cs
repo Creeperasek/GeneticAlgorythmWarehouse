@@ -27,6 +27,17 @@ namespace GeneticAlgorythmWH
             shelvesList.Shuffle();
         }
 
+        public double GetWarehouseValue()
+        {
+            double sum = 0;
+
+            foreach (Shelf shelf in shelvesList){
+                sum += shelf.GetShelfValue();
+            }
+            return sum;
+
+        }
+
         public override string ToString()
         {
             string str = "Warehouse:";

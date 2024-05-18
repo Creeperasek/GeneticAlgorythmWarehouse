@@ -9,8 +9,10 @@
             population.GeneratePopulation(10,6);
 
 
-            
-            
+            foreach(var warehouse in population){
+                Console.WriteLine("Warehouse: {0}",warehouse.GetWarehouseValue());
+            }
+
             
         }
     }

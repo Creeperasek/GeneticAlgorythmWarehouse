@@ -12,3 +12,4 @@ c:\Users\creep\Desktop\ProjektyStudia\GeneticAlgorythmWarehouse\GeneticAlgorythm
 c:\Users\creep\Desktop\ProjektyStudia\GeneticAlgorythmWarehouse\GeneticAlgorythmWH\obj\Debug\net8.0\GeneticAlgorythmWH.pdb
 c:\Users\creep\Desktop\ProjektyStudia\GeneticAlgorythmWarehouse\GeneticAlgorythmWH\obj\Debug\net8.0\GeneticAlgorythmWH.genruntimeconfig.cache
 c:\Users\creep\Desktop\ProjektyStudia\GeneticAlgorythmWarehouse\GeneticAlgorythmWH\obj\Debug\net8.0\ref\GeneticAlgorythmWH.dll
+c:\Users\creep\Desktop\ProjektyStudia\GeneticAlgorythmWarehouse\GeneticAlgorythmWH\obj\Debug\net8.0\GeneticAlgorythmWH.sourcelink.json
