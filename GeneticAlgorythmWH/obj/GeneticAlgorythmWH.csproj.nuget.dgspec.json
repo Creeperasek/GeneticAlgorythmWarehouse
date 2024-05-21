@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj": {}
+    "c:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj": {
+    "c:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj",
+        "projectUniqueName": "c:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj",
         "projectName": "GeneticAlgorythmWH",
-        "projectPath": "C:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj",
+        "projectPath": "c:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\GeneticAlgorythmWH.csproj",
         "packagesPath": "C:\\Users\\creep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\obj\\",
+        "outputPath": "c:\\Users\\creep\\Desktop\\ProjektyStudia\\GeneticAlgorythmWarehouse\\GeneticAlgorythmWH\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
