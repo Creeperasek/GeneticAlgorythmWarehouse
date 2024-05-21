@@ -35,7 +35,6 @@ namespace GeneticAlgorythmWH
                 sum += shelf.GetShelfValue();
             }
             return sum;
-
         }
 
         public override string ToString()
