@@ -57,8 +57,11 @@ namespace GeneticAlgorythmWH
                     child = parent1;
                 }
 
+
                 newPopulation.Add(child);
             }
+
+
 
 
             foreach (Warehouse warehouse in newPopulation)
@@ -97,7 +100,15 @@ namespace GeneticAlgorythmWH
 
         public void Mutate(Warehouse warehouse)
         {
-            //TODO: Mutating
+            //Getting random warehouse and random shelf and getting its coordinates
+            int randomIndexMutation = Random.Next(Population.Count);
+            int randomShelfMutation = Random.Next(Population[randomIndexMutation].shelvesList.Count);
+            Point MutationPoint = Population[randomIndexMutation].shelvesList[randomShelfMutation].Coordinates;
+
+            //Asign coordinates to random shelf in mutated warehouse
+            int randomIndex = Random.Next(warehouse.shelvesList.Count);
+            warehouse.shelvesList[randomIndex].Coordinates = MutationPoint;
+
         }
     }
 }
