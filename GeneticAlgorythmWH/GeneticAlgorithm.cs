@@ -20,7 +20,7 @@ namespace GeneticAlgorythmWH
             CrossoverRate = crossoverRate;
             Random = new Random();
 
-            Warehouse warehouse= new Warehouse(6);
+            Warehouse warehouse = new Warehouse(6);
 
             for (int i = 1; i < populationSize; i++)
             {
@@ -91,7 +91,7 @@ namespace GeneticAlgorythmWH
             {
                 offspring.shelvesList[i] = parent1.shelvesList[i];
             }
-            
+
             //Getting shelvs from parent2
             for (int i = crossoverPoint; i < parent2.shelvesList.Count; i++)
             {
@@ -104,14 +104,16 @@ namespace GeneticAlgorythmWH
         public void Mutate(Warehouse warehouse)
         {
             //Getting random warehouse and random shelf and getting its coordinates
-            int randomIndexMutation = Random.Next(Population.Count);
-            int randomShelfMutation = Random.Next(Population[randomIndexMutation].shelvesList.Count);
-            Point MutationPoint = Population[randomIndexMutation].shelvesList[randomShelfMutation].Coordinates;
+            if (Population.Count > 0)
+            {
+                int randomIndexMutation = Random.Next(Population.Count);
+                int randomShelfMutation = Random.Next(Population[randomIndexMutation].shelvesList.Count);
+                Point MutationPoint = Population[randomIndexMutation].shelvesList[randomShelfMutation].Coordinates;
 
-            //Asign coordinates to random shelf in mutated warehouse
-            int randomIndex = Random.Next(warehouse.shelvesList.Count);
-            warehouse.shelvesList[randomIndex].Coordinates = MutationPoint;
-
+                //Asign coordinates to random shelf in mutated warehouse
+                int randomIndex = Random.Next(warehouse.shelvesList.Count);
+                warehouse.shelvesList[randomIndex].Coordinates = MutationPoint;
+            }
         }
     }
 }
