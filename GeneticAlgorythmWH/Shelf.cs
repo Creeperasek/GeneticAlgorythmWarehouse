@@ -22,7 +22,7 @@ namespace GeneticAlgorythmWH
 
         public override string ToString()
         {
-            return $"Id:{Id}\tUsage:{Usage}\tCords:{Coordinates}\n";
+            return $"Id:{Id}\tUsage:{Usage}\tCords:{Coordinates}\t ShelfValue: {GetShelfValue()}\n";
         }
 
     }
