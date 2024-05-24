@@ -44,7 +44,7 @@ namespace GeneticAlgorythmWH
         {
             List<Warehouse> newPopulation = new List<Warehouse>();
 
-            for (int i = 0; i < Population.Count; i++)
+            while (Population.Count > 0)
             {
                 Warehouse parent1 = TournamentSelection();
                 Warehouse parent2 = TournamentSelection();
@@ -61,6 +61,8 @@ namespace GeneticAlgorythmWH
 
 
                 newPopulation.Add(child);
+                Population.Remove(parent1);
+                Population.Remove(parent2);
             }
 
 
