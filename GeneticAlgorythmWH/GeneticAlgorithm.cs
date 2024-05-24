@@ -20,9 +20,11 @@ namespace GeneticAlgorythmWH
             CrossoverRate = crossoverRate;
             Random = new Random();
 
-            for (int i = 0; i < populationSize; i++)
+            Warehouse warehouse= new Warehouse(6);
+
+            for (int i = 1; i < populationSize; i++)
             {
-                Population.Add(new Warehouse(10));
+                Population.Add(warehouse);
             }
         }
 
@@ -60,7 +62,6 @@ namespace GeneticAlgorythmWH
 
                 newPopulation.Add(child);
             }
-
 
 
 
