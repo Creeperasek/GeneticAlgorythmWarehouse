@@ -30,11 +30,6 @@ namespace GeneticAlgorythmWH
             }
         }
 
-        public void ShuffleShelvs()
-        {
-            shelvesList.Shuffle();
-        }
-
         public double GetWarehouseValue()
         {
             double sum = 0;
@@ -43,6 +38,19 @@ namespace GeneticAlgorythmWH
                 sum += shelf.GetShelfValue();
             }
             return sum;
+        }
+
+        public void Shuffle()
+        {
+            Random random= new Random();
+
+            int n = shelvesList.Count;
+
+            while (n > 1){
+                int k = random.Next(n--);
+                (shelvesList[k].Coordinates, shelvesList[n].Coordinates) = (shelvesList[n].Coordinates, shelvesList[k].Coordinates);
+            }
+
         }
 
         public override string ToString()

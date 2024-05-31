@@ -25,6 +25,7 @@ namespace GeneticAlgorythmWH
             for (int i = 1; i < populationSize; i++)
             {
                 Population.Add(warehouse);
+                warehouse.Shuffle();
             }
         }
 
@@ -59,10 +60,8 @@ namespace GeneticAlgorythmWH
                     child = parent1;
                 }
 
-
                 newPopulation.Add(child);
                 Population.Remove(parent1);
-                Population.Remove(parent2);
             }
 
 
@@ -81,7 +80,7 @@ namespace GeneticAlgorythmWH
         public Warehouse Crossover(Warehouse parent1, Warehouse parent2)
         {
             //Creating offspring
-            Warehouse offspring = new Warehouse(parent1.shelvesList.Count);
+            Warehouse offspring = new Warehouse(parent1.shelvesList);
 
             //Getting crossoverPoint
             int crossoverPoint = Random.Next(1, parent1.shelvesList.Count - 1);
@@ -89,13 +88,13 @@ namespace GeneticAlgorythmWH
             //Getting shelvs from parent1
             for (int i = 0; i < crossoverPoint; i++)
             {
-                offspring.shelvesList[i] = parent1.shelvesList[i];
+                offspring.shelvesList[i].Coordinates = parent1.shelvesList[i].Coordinates;
             }
 
             //Getting shelvs from parent2
             for (int i = crossoverPoint; i < parent2.shelvesList.Count; i++)
             {
-                offspring.shelvesList[i] = parent2.shelvesList[i];
+                offspring.shelvesList[i].Coordinates = parent2.shelvesList[i].Coordinates;
             }
 
             return offspring;
