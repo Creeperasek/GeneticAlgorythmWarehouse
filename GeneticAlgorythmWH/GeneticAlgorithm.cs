@@ -79,40 +79,32 @@ namespace GeneticAlgorythmWH
 
         public Warehouse Crossover(Warehouse parent1, Warehouse parent2)
         {
-            //Creating offspring
-            Warehouse offspring = new Warehouse(parent1.shelvesList);
+            List<Shelf> offspringShelves = new List<Shelf>();
 
-            //Getting crossoverPoint
             int crossoverPoint = Random.Next(1, parent1.shelvesList.Count - 1);
 
-            //Getting shelvs from parent1
+            
             for (int i = 0; i < crossoverPoint; i++)
             {
-                offspring.shelvesList[i].Coordinates = parent1.shelvesList[i].Coordinates;
+                var parentShelf = parent1.shelvesList[i];
+                offspringShelves.Add(new Shelf(parentShelf.Id, parentShelf.Usage, new Point(parentShelf.Coordinates.X, parentShelf.Coordinates.Y)));
             }
 
-            //Getting shelvs from parent2
+            
             for (int i = crossoverPoint; i < parent2.shelvesList.Count; i++)
             {
-                offspring.shelvesList[i].Coordinates = parent2.shelvesList[i].Coordinates;
+                var parentShelf = parent2.shelvesList[i];
+                offspringShelves.Add(new Shelf(parentShelf.Id, parentShelf.Usage, new Point(parentShelf.Coordinates.X, parentShelf.Coordinates.Y)));
             }
 
-            return offspring;
+            return new Warehouse(offspringShelves);
         }
 
+        //Mutates Usage of random Shelf
         public void Mutate(Warehouse warehouse)
         {
-            //Getting random warehouse and random shelf and getting its coordinates
-            if (Population.Count > 0)
-            {
-                int randomIndexMutation = Random.Next(Population.Count);
-                int randomShelfMutation = Random.Next(Population[randomIndexMutation].shelvesList.Count);
-                Point MutationPoint = Population[randomIndexMutation].shelvesList[randomShelfMutation].Coordinates;
-
-                //Asign coordinates to random shelf in mutated warehouse
-                int randomIndex = Random.Next(warehouse.shelvesList.Count);
-                warehouse.shelvesList[randomIndex].Coordinates = MutationPoint;
-            }
+            int randomShelfIndex = Random.Next(warehouse.shelvesList.Count);
+            warehouse.shelvesList[randomShelfIndex].Usage = Random.Next(0, 100);
         }
     }
 }

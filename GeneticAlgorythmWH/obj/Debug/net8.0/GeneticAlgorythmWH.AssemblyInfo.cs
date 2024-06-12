@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeneticAlgorythmWH")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52e5c9c6d1e488c52647041aff5b344a0ae397ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+017035302aff434d7a2b99caf9ed7e56df952986")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeneticAlgorythmWH")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeneticAlgorythmWH")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

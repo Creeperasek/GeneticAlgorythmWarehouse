@@ -14,7 +14,7 @@ namespace GeneticAlgorythmWH
                 List<Warehouse> population = algorithm.Population;
 
                 Console.WriteLine($"GEN {i}:\n");
-                var warehouses = population.OrderByDescending(w => w.GetWarehouseValue()).First();
+                var warehouses = population.OrderBy(w => w.GetWarehouseValue()).First();
                 
                 Console.WriteLine($"{warehouses}");
                 
